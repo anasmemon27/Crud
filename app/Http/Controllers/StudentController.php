@@ -44,7 +44,8 @@ class StudentController extends Controller
     public function edit($id)
     {
         $students =DB::table('student')->find($id);
-        return view('editform',['student'=>$student]);
+        //dd($students);
+        return view('editform')->with('student',$students);
     }
 
     /**

@@ -23,34 +23,7 @@
     <div>
         {{session('status')}}
     </div>
-        
-    @endif
-    <table>
-        <thead>
-        <tr>
-            <th>id</th>
-            <th>FName</th>
-            <th>LName</th>
-            <th>Action</th>
-            <hr>
-        </tr>
-        <hr>
-    </thead>
-    <tbody>
-        @foreach ($student as $stu)
-        <tr>
-            <td>{{$stu->id}}</td>
-            <td>{{$stu->fname}}</td>
-            <td>{{$stu->lname}}</td>
-            <td>{{$stu->email}}</td>
-            <td>
-                <a href=""class ='btn'>Edit</a>
-                <a href=""class ='btn'>Delet</a>
-            </td>
-        </tr>
-            
-        @endforeach
-    </tbody>
-    </table>
+            @endif
+
 </body>
 </html>
