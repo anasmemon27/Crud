@@ -57,8 +57,8 @@
             <td>{{$stu->lname}}</td>
             <td>{{$stu->email}}</td>
             <td>
-                <a href=""class ='btn'>Edit</a>
-                <a href=""class ='btn'>Delet</a>
+                <a href="{{url('/edit',$stu->id)}}"class ='btn'>Edit</a>
+                <a href="{{url('/delete',$stu->id)}}"class ='btn'>Delet</a>
             </td>
         </tr>
             

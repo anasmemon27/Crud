@@ -9,14 +9,14 @@
 <body>
     <form action="" method="post">
         @csrf
-        FirstName: <input type="text" name="fname" id="fname" value="{{$student->fname}}">
-        <br><br>
+        @method('PUT')
+        FirstName: <input type="text" name="fname" id="fname" value="{{$student->fname}}"><br><br>
 
-        LastName: <input type="lname" name="lname" id="lname" alue="{{$student->lname}}">
-        <br><br>
-        Email: <input type="email" name="email" id="email"alue="{{$student->email}}">
-        <br><br>
-        <input type="submit" value="Submit">
+        LastName: <input type="lname" name="lname" id="lname" value="{{$student->lname}}"><br><br>
+
+        Email: <input type="email" name="email" id="email"value="{{$student->email}}"><br><br>
+
+        <button>Update</button>
     </form>
     {{-- {{-This Containt Status-}} --}}
     @if (session()->has('status'))

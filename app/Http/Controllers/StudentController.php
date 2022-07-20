@@ -57,7 +57,12 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       DB::table('student')->where('id',$id)->update([
+        'fname' => $request->fname,
+        'lname' => $request->lname,
+        'email' => $request->email,
+       ]);
+       return redirect(route('index'))->with('status','Registration Complated!');
     }
 
     /**
@@ -68,6 +73,7 @@ class StudentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('student')->where('id',$id)->delete();
+        return redirect(route('index'))->with('status','Registration Deleted !');
     }
 }
